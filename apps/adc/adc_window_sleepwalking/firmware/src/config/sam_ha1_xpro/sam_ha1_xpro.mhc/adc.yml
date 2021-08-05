@@ -159,7 +159,7 @@ children:
       - type: String
         attributes: {id: text}
         children:
-        - {type: Value, value: '**** Conversion Time is 12.6666666667 uS ****'}
+        - {type: Value, value: '**** Conversion Time is 76.0 uS ****'}
   - type: String
     attributes: {id: ADC_START_API}
     children:

@@ -17,7 +17,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: ADC_INTERRUPT_ENABLE}
     children:
@@ -60,13 +60,8 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: 'true'}
-  - type: Boolean
-    attributes: {id: CONFIG_CLOCK_DFLL_RUNSTDY}
-    children:
-    - type: Values
-      children:
       - type: User
-        attributes: {value: 'true'}
+        attributes: {value: 'false'}
   - type: Boolean
     attributes: {id: CONFIG_CLOCK_OSC8M_ENABLE}
     children:
@@ -74,13 +69,22 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: 'false'}
+      - type: User
+        attributes: {value: 'true'}
+  - type: Boolean
+    attributes: {id: CONFIG_CLOCK_OSC8M_RUNSTDY}
+    children:
+    - type: Values
+      children:
+      - type: User
+        attributes: {value: 'true'}
   - type: Integer
     attributes: {id: CPU_CLOCK_FREQUENCY}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Menu
     attributes: {id: CoreIARMenu}
     children:
@@ -168,7 +172,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '0'}
   - type: Integer
     attributes: {id: DPLL_CLOCK_FREQ}
     children:
@@ -189,14 +193,14 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Integer
     attributes: {id: GCLK_0_FREQ}
     children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: KeyValueSet
     attributes: {id: GCLK_0_SRC}
     children:
@@ -204,6 +208,8 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '7'}
+      - type: User
+        attributes: {value: '6'}
   - type: Integer
     attributes: {id: GCLK_1_DIV}
     children:
@@ -291,9 +297,8 @@ children:
         children:
         - type: Values
           children:
-          - {type: Value, value: '    DFLL_Initialize();'}
-          - {type: Value, value: '    GCLK1_Initialize();'}
           - {type: Value, value: '    GCLK0_Initialize();'}
+          - {type: Value, value: '    GCLK1_Initialize();'}
   - type: Boolean
     attributes: {id: GCLK_CYCLE_FORMED}
     children:
@@ -314,7 +319,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: GCLK_ID_30_CHEN}
     children:
@@ -328,7 +333,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: GCLK_ID_4_CHEN}
     children:
@@ -363,7 +368,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: GCLK_INST_NUM1}
     children:
@@ -489,7 +494,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0'}
+        attributes: {id: core, value: '8000000'}
   - type: String
     attributes: {id: PIN_39_FUNCTION_TYPE}
     children:
@@ -616,6 +621,27 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x1'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_27_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_28_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_3_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: PORT_GROUP_0_PMUX1}
     children:
@@ -706,7 +732,7 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '48000000'}
+        attributes: {id: core, value: '8000000'}
   - type: Boolean
     attributes: {id: SERCOM1_INTERRUPT_ENABLE}
     children:
@@ -741,7 +767,16 @@ children:
     - type: Values
       children:
       - type: Dynamic
-        attributes: {id: core, value: '0xBB80'}
+        attributes: {id: core, value: '0x1F40'}
+  - type: Float
+    attributes: {id: SYSTICK_PERIOD_MS}
+    children:
+    - type: Attributes
+      children:
+      - type: Float
+        attributes: {id: max}
+        children:
+        - {type: Value, value: '2097.1519'}
   - type: Integer
     attributes: {id: SYSTICK_PERIOD_US}
     children:
