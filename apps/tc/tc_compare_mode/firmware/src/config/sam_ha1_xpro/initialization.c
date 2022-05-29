@@ -135,11 +135,10 @@ void SYS_Initialize ( void* data )
 
     TC7_CompareInitialize();
 
-    NVMCTRL_Initialize( );
-
     TC6_CompareInitialize();
 
-    EVSYS_Initialize();
+    NVMCTRL_Initialize( );
+
 
     TC3_CompareInitialize();
 
