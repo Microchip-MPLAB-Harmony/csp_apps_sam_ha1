@@ -160,7 +160,6 @@ void SYS_Initialize ( void* data )
 
     SERCOM1_USART_Initialize();
 
-    EVSYS_Initialize();
 
 	SYSTICK_TimerInitialize();
     ADC_Initialize();
