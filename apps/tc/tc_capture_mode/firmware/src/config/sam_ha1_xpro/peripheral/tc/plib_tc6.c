@@ -63,7 +63,7 @@
 // *****************************************************************************
 
 
-TC_CAPTURE_CALLBACK_OBJ TC6_CallbackObject;
+static TC_CAPTURE_CALLBACK_OBJ TC6_CallbackObject;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -76,7 +76,7 @@ void TC6_CaptureInitialize( void )
     /* Reset TC */
     TC6_REGS->COUNT16.TC_CTRLA = TC_CTRLA_SWRST_Msk;
 
-    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
     }
@@ -102,7 +102,7 @@ void TC6_CaptureStart( void )
     /* Enable TC */
     TC6_REGS->COUNT16.TC_CTRLA |= TC_CTRLA_ENABLE_Msk;
 
-    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
     }
@@ -111,9 +111,9 @@ void TC6_CaptureStart( void )
 void TC6_CaptureStop( void )
 {
     /* Disable TC */
-    TC6_REGS->COUNT16.TC_CTRLA &= ~TC_CTRLA_ENABLE_Msk;
+    TC6_REGS->COUNT16.TC_CTRLA =((TC6_REGS->COUNT16.TC_CTRLA) & (uint16_t)(~TC_CTRLA_ENABLE_Msk));
 
-    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
     }
@@ -126,8 +126,8 @@ uint32_t TC6_CaptureFrequencyGet( void )
 
 void TC6_CaptureCommandSet(TC_COMMAND command)
 {
-    TC6_REGS->COUNT16.TC_CTRLBSET = command << TC_CTRLBSET_CMD_Pos;
-    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    TC6_REGS->COUNT16.TC_CTRLBSET =(uint8_t)command << TC_CTRLBSET_CMD_Pos;
+    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
     }   
@@ -137,9 +137,9 @@ void TC6_CaptureCommandSet(TC_COMMAND command)
 uint16_t TC6_Capture16bitChannel0Get( void )
 {
     /* Write command to force CC register read synchronization */
-    TC6_REGS->COUNT16.TC_READREQ = TC_READREQ_RREQ_Msk | TC_COUNT16_CC_REG_OFST;
+    TC6_REGS->COUNT16.TC_READREQ = TC_READREQ_RREQ_Msk | (uint16_t)TC_COUNT16_CC_REG_OFST;
 
-    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
     }
@@ -149,9 +149,9 @@ uint16_t TC6_Capture16bitChannel0Get( void )
 uint16_t TC6_Capture16bitChannel1Get( void )
 {
     /* Write command to force CC register read synchronization */
-    TC6_REGS->COUNT16.TC_READREQ = TC_READREQ_RREQ_Msk | TC_COUNT16_CC_REG_OFST;
+    TC6_REGS->COUNT16.TC_READREQ = TC_READREQ_RREQ_Msk | (uint16_t)TC_COUNT16_CC_REG_OFST;
 
-    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk))
+    while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
     }
@@ -167,7 +167,7 @@ void TC6_CaptureCallbackRegister( TC_CAPTURE_CALLBACK callback, uintptr_t contex
 void TC6_CaptureInterruptHandler( void )
 {
     TC_CAPTURE_STATUS status;
-    status = (TC_CAPTURE_STATUS) (TC6_REGS->COUNT16.TC_INTFLAG);
+    status = (TC6_REGS->COUNT16.TC_INTFLAG);
     /* Clear all interrupts */
     TC6_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
 
