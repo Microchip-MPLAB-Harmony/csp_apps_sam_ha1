@@ -56,8 +56,8 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/pm/plib_pm.h"
-#include "peripheral/rtc/plib_rtc.h"
 #include "peripheral/ac/plib_ac.h"
+#include "peripheral/rtc/plib_rtc.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -66,6 +66,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "ATSAMHA1G16AB"
+#define DEVICE_ARCH			 "CORTEX-M0PLUS"
+#define DEVICE_FAMILY		 "SAMH"
+#define DEVICE_SERIES		 "SAMHA1"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 8000000
