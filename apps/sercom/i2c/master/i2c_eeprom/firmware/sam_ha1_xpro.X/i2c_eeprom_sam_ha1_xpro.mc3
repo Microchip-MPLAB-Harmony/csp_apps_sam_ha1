@@ -1,4 +1,4 @@
-<config configName="sam_ha1_xpro" projectName="i2c_eeprom_sam_ha1_xpro" configVersion="1.1" device="ATSAMHA1G16AB" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
+<config configName="sam_ha1_xpro" projectName="i2c_eeprom_sam_ha1_xpro" configVersion="1.1" device="ATSAMHA1G16AB" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -27,7 +27,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1616,8 +1616,12 @@
          <hash>c24200ed64eb4f8aaca8b64776505fa83bd037f59b2aca6f139942fa41541526</hash>
       </entry>
       <entry>
+         <file>..\src\config\sam_ha1_xpro\pin_configurations.csv</file>
+         <hash>c827c46d8c13147747d326809f93e10641ec0f4f81021734debea5c7b018edc9</hash>
+      </entry>
+      <entry>
          <file>..\src\config\sam_ha1_xpro\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\ATSAMHA1G16AB.ld</file>
@@ -1633,7 +1637,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\initialization.c</file>
-         <hash>486c104126bce0af5f9918766965831c5061a2587224804983bbe1287aed7571</hash>
+         <hash>20b020f143e4ee0bc12aaffadeec833bf2f172438c7930a08b037eb48a97be74</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvic\plib_nvic.h</file>
@@ -1665,7 +1669,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\startup_xc32.c</file>
-         <hash>d7ba451f4fffc267a5da6a83377b2b935a88cd73342f8a1f38ea8c39a86d963f</hash>
+         <hash>e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\mtb.h</file>
@@ -1681,7 +1685,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>f5608274bebd59b9430a3c49e4de3dd8fb4593a56dd0873292e3778ad4781b93</hash>
+         <hash>04c393c1a7e223da256e1ec1333676f59db461caf6e4a24503a97d9c6076ca10</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\component\gclk.h</file>
@@ -1689,7 +1693,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>a9a7146b95c1db41e88d45a8046111ad8256cbd16cf0f0d75c57068bd668bd67</hash>
+         <hash>b741437468e28cc61326ad4eb4f5246f24741d7b032254ebbb97070c5f475daa</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -1705,7 +1709,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\i2c_master\plib_sercom_i2c_master_common.h</file>
-         <hash>ff9e28a56c761d9cac20d42c6819063321f71c0d2726249be9bd818e44c3811d</hash>
+         <hash>f167b04b3c6a0f83fe41b7b6f810cbf0a48b8ca7d5a747b76463dd53d3c1a2a2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\sysctrl.h</file>
@@ -1813,7 +1817,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.c</file>
-         <hash>25656153aa6571deb8283ab8bf50e2768737de9cc8b4798a685614fb54a533b3</hash>
+         <hash>2471b3d80de53d1bab5539238907e35a776622f3d50d91457689abcde16f3836</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\evsys.h</file>
@@ -1845,7 +1849,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\interrupts.c</file>
-         <hash>7280e5c64d37f4bdfa7e4e95001cf9049437f4b50ab76296ed09ab06c4f398a5</hash>
+         <hash>4b0a61b9c83a8db5b1ca16eb5b8b66934275273187724478bf48fce29b69122e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\nvmctrl.h</file>
@@ -1877,7 +1881,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>d0cb51cdb15b1a54eb3842f7c3942c83da67c7c689cc7c194aa8e6f2a4e26653</hash>
+         <hash>e6c84ba6d927494c7cdb98103f53b0916b78ebbfb32d0de67f18fbc853a8f869</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\component\pac.h</file>
@@ -1905,7 +1909,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\definitions.h</file>
-         <hash>6467e8eb5f600a8cbfa464b13ac3fb9de34601cf58ce7edafb3ef3ef7977eca3</hash>
+         <hash>bb2c02da9aaf9f88007693b3df1e95c75910986b724f8b9d88c6b48bb26cebcc</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\eic.h</file>
@@ -1953,7 +1957,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\port\plib_port.c</file>
-         <hash>abbf7aeb11010de1ac23719a973cd2166f27523573983cd3f44810e98d35b1ca</hash>
+         <hash>388a8b07ff1a26dbd49f3fe8e9c9a4b96b3b3ff7992f7d58f8a6b6ef8b5c5c83</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\sbmatrix.h</file>
@@ -1965,7 +1969,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\exceptions.c</file>
-         <hash>b850253aacaae1bddfcb426c2dc11e0688900afffe9b22c60d0ab16298701118</hash>
+         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
