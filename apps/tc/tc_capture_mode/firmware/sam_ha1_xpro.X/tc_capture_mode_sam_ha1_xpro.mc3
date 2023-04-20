@@ -1,4 +1,4 @@
-<config configName="sam_ha1_xpro" projectName="tc_capture_mode_sam_ha1_xpro" configVersion="1.1" device="ATSAMHA1G16AB" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.3">
+<config configName="sam_ha1_xpro" projectName="tc_capture_mode_sam_ha1_xpro" configVersion="1.1" device="ATSAMHA1G16AB" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.1"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.1"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2951,7 +2951,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\usart\plib_sercom1_usart.c</file>
-         <hash>010d7ff82a3fad857a4693e048c3c28b3fd5eb30d1b9509765bfb26b4747ca43</hash>
+         <hash>d13ccad93cc0678b388781fa16d1f1e20f237458fbf875922dc96906e033c943</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\component\ac.h</file>
@@ -2979,11 +2979,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\usart\plib_sercom1_usart.h</file>
-         <hash>eda7fad2e68d6196c02adf3f71460a420427d072050cee484ef682d1bd933069</hash>
+         <hash>20275d0f8ab3241a780bc4787dee53a30c43c9f33c6f3a6eb7ce23e186337b6c</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_ha1_xpro\pin_configurations.csv</file>
+         <hash>902d98f104d605df962bf88558dab202068c6f12d28239d27a6cc2c2bed2909e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\toolchain_specifics.h</file>
-         <hash>c93f9d68b1623668727be21b4449250a7e4a5d7040776d6f6d604a7528ffc9eb</hash>
+         <hash>a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\ATSAMHA1G16AB.ld</file>
@@ -2999,7 +3003,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\initialization.c</file>
-         <hash>73187c9ed6dc4740c32c049c6cda32656387ff92e6aeb7bf7ff0e99eea75e421</hash>
+         <hash>fc21f9792703b8da5e97338dbc967e02f404cde2e555a1e4d79f69ace1f80c32</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvic\plib_nvic.h</file>
@@ -3035,7 +3039,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\startup_xc32.c</file>
-         <hash>d7ba451f4fffc267a5da6a83377b2b935a88cd73342f8a1f38ea8c39a86d963f</hash>
+         <hash>e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\mtb.h</file>
@@ -3051,7 +3055,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvic\plib_nvic.c</file>
-         <hash>5a77c9a5d5994cb30cbe39925c162c6f51014f7e067db0a2f3b41850bcaf8072</hash>
+         <hash>8cc8d0307e1e7d8f964f3e087f2f2b93c1bac3ed55cc4ef573d705be2c77cd7a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\eic\plib_eic.c</file>
@@ -3067,7 +3071,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\clock\plib_clock.c</file>
-         <hash>d8940ab979d1e5134fff9c882534140d09bc0b4c771aa9516285710621f0e343</hash>
+         <hash>2400435f0ab2543e539b8fcbd028268652dfd530af4be49772050d6af53d5dbd</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -3171,7 +3175,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\systick\plib_systick.c</file>
-         <hash>f23caebefbacd5f2fa5051caadacdba66f41368a782707a0b8418c9b4ee155ae</hash>
+         <hash>9178af8001492763213e84e6cf11aa357f1e344cbea0988699771364ef69c749</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\systick\plib_systick.h</file>
@@ -3207,7 +3211,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\tc\plib_tc6.c</file>
-         <hash>92b1b3d2ee08ea73bf667459c3c64f0dd03928717cbc8d1d5ba64e688db9d8b7</hash>
+         <hash>68b4bca7f34a67bb370f124b86aa080dc715f712d8776b02721fd91d2149a2c9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\evsys.h</file>
@@ -3215,7 +3219,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\stdio\xc32_monitor.c</file>
-         <hash>175fc79acfdade0146f47085253ca651be148ee259215fb02c1404c31777d70b</hash>
+         <hash>5b21c08cf1b699e41f3d722865c473d6e32c68356c05b13ce457a7faed279e97</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\component\wdt.h</file>
@@ -3235,7 +3239,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\interrupts.c</file>
-         <hash>3cbc825711786ccd8b1bc45b1790115679973b7e29a10041c185e7e8dfb6acae</hash>
+         <hash>34e9d572e2eccab58b54fce8798c800871a2a91ffe9564a2a764e170ec013639</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\nvmctrl.h</file>
@@ -3267,7 +3271,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>d0cb51cdb15b1a54eb3842f7c3942c83da67c7c689cc7c194aa8e6f2a4e26653</hash>
+         <hash>e6c84ba6d927494c7cdb98103f53b0916b78ebbfb32d0de67f18fbc853a8f869</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\component\pac.h</file>
@@ -3295,7 +3299,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\definitions.h</file>
-         <hash>8301d33cd2e245bec8e16073cdf0ab3922b3abe3e576f11f3be20c48bab13247</hash>
+         <hash>92cf44c9f7f9dd81954ccf7da9e55c77d6efd0599ed099358ee46e6b750c182d</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\eic.h</file>
@@ -3307,7 +3311,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>1dbf674e2bc9708afe2cacc75141707c42b89f166e0f1d6f81c04b1b2fa166b8</hash>
+         <hash>63c6e89936ba47e8989478a8be0fa40b406361f2f0dcc1b6cfcd801b50a4bf92</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\device_vectors.h</file>
@@ -3347,7 +3351,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\peripheral\port\plib_port.c</file>
-         <hash>482f7bf41466fa6b036c62310ed905a4a1a33e3a60a27fadeb21c5d297f27252</hash>
+         <hash>fcd149368e5fbb4435ad4fbe2aadf1d784b2ce941a8168c519653afe4c80dd43</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMHA1G16AB_DFP\instance\sbmatrix.h</file>
@@ -3359,7 +3363,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_ha1_xpro\exceptions.c</file>
-         <hash>b850253aacaae1bddfcb426c2dc11e0688900afffe9b22c60d0ab16298701118</hash>
+         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

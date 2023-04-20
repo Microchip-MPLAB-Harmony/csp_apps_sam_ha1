@@ -63,7 +63,7 @@
 // *****************************************************************************
 
 
-static TC_CAPTURE_CALLBACK_OBJ TC6_CallbackObject;
+volatile static TC_CAPTURE_CALLBACK_OBJ TC6_CallbackObject;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -130,7 +130,7 @@ void TC6_CaptureCommandSet(TC_COMMAND command)
     while((TC6_REGS->COUNT16.TC_STATUS & TC_STATUS_SYNCBUSY_Msk)!= 0U)
     {
         /* Wait for Write Synchronization */
-    }   
+    }
 }
 
 
@@ -164,7 +164,7 @@ void TC6_CaptureCallbackRegister( TC_CAPTURE_CALLBACK callback, uintptr_t contex
     TC6_CallbackObject.context = context;
 }
 
-void TC6_CaptureInterruptHandler( void )
+void __attribute__((used)) TC6_CaptureInterruptHandler( void )
 {
     TC_CAPTURE_STATUS status;
     status = (TC6_REGS->COUNT16.TC_INTFLAG);
@@ -173,7 +173,8 @@ void TC6_CaptureInterruptHandler( void )
 
     if(TC6_CallbackObject.callback != NULL)
     {
-        TC6_CallbackObject.callback(status, TC6_CallbackObject.context);
+        uintptr_t context = TC6_CallbackObject.context;
+        TC6_CallbackObject.callback(status, context);
     }
 }
 
